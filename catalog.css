@@ -305,7 +305,11 @@ section {
   }
 
 }
-
+@media(max-width:768px){
+  section {
+    padding: 0 29px;
+  }
+}
 
 
 @media(max-width:640px) {

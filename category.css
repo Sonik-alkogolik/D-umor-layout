@@ -102,12 +102,16 @@ section {
     font-family: "Open Sans", sans-serif;
     width: 100%;
     cursor: pointer;
+    position: relative;
 }
 
-.filter-item.active {}
+
 
 .filter-name {
-    border: 1px solid #E8E9D9;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid #E8E9D9;
     font-size: 12px;
     font-weight: 600;
     line-height: 15.6px;
@@ -118,6 +122,29 @@ section {
     justify-content: flex-start;
     align-items: center;
     padding-left: 24px;
+    border-radius: 8px;
+}
+
+.filter-name::after {
+    content: '';
+    position: absolute;
+    display: flex;
+    top: 20px;
+    right: 24px;
+    width: 18px;
+    height: 18px;
+    background: url(/img/arrow-filter.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(180deg);
+}
+
+.filter-name.active {
+    border: 1px solid #E8E9D9;
+}
+
+.filter-name.active::after {
+    transform: rotate(0deg);
 }
 
 .filter-list {
@@ -128,19 +155,22 @@ section {
     height: 1px;
     align-items: flex-start;
     box-shadow: 0px 4px 20px 0px #3B253729;
-    margin-top: 4px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s ease 0.5s;
+    border-radius: 8px;
 }
 
 .filter-list.list_active {
+    position: absolute;
     height: auto;
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(4px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 10;
+    background: #FFFFFF;
 }
 
 .custom-checkbox {
@@ -152,7 +182,7 @@ label {
     align-items: center;
     cursor: pointer;
     position: relative;
-    padding-left: 30px;
+    padding-left: 38px;
     padding-top: 11px;
     padding-bottom: 11px;
 }
@@ -164,7 +194,7 @@ label::before {
     height: 15px;
     display: flex;
     position: absolute;
-    left: 0;
+    left: 11px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
@@ -175,6 +205,15 @@ label::before {
 
 .custom-checkbox-label.checked::before {
     background-image: url('/img/checkbox_cheked.png');
+}
+
+.filter-name.reset-filter {
+    color: #897C87;
+    border: none;
+}
+
+.filter-name.reset-filter::after {
+    display: none;
 }
 
 .products-wrapp {
@@ -209,18 +248,18 @@ label::before {
 .product_image_item {
     width: 100%;
     height: 310px;
-
 }
 
 .product_image_item img {
     width: 100%;
     height: 100%;
     display: flex;
+    border-radius:18px;
 }
 
 .product-attribute-wrapp {
     width: 100%;
-    padding: 16px;
+    padding: 16px 16px 24px 16px;
 }
 
 .product-attribute-type {
@@ -252,17 +291,18 @@ label::before {
     color: #555C20;
 }
 
-.price-wrapp span.woocommerce-Price-amount.del >bdi {
+.price-wrapp span.woocommerce-Price-amount.del>bdi {
     text-decoration: line-through;
     color: #BCBE99;
-	text-decoration-color: #BCBE99;
+    text-decoration-color: #BCBE99;
     padding-left: 12px;
 }
+
 .btn_add_to_basket {
     position: absolute;
     display: flex;
-    background:url(/img/icon-add-basket.png);
-    background-repeat:no-repeat;
+    background: url(/img/icon-add-basket.png);
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     bottom: 16px;
     right: 54px;
@@ -273,11 +313,149 @@ label::before {
 .tinvwl_add_to_wishlist_button {
     position: absolute;
     display: flex;
-    background:url(/img/icon-wishlist.png);
-    background-repeat:no-repeat;
+    background: url(/img/icon-wishlist.png);
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     bottom: 16px;
     right: 16px;
     width: 30px;
     height: 30px;
+}
+
+@media(max-width:1430px) {
+    .category-filter {
+        max-width: 20%;
+    }
+
+    .products-wrapp {
+        max-width: 78%;
+    }
+}
+
+@media(max-width:1200px) {
+    .category-wrapp {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .category-filter {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .products-wrapp {
+        margin-top: 40px;
+        max-width: 100%;
+    }
+}
+
+@media(max-width:980px) {
+    .product_item {
+        position: relative;
+        width: 100%;
+        height: 321px;
+    }
+
+    .product_image_item {
+        height: 226px;
+    }
+
+    .product-attribute-wrapp {
+        padding: 12px;
+    }
+
+    .product-attribute-type {
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 13px;
+        padding-bottom: 8px;
+    }
+
+    .woocommerce-loop-product__title {
+        font-size: 17.53px;
+        font-weight: 400;
+        line-height: 23.39px;
+        margin-bottom: 8px;
+    }
+    .price-wrapp span.woocommerce-Price-amount>bdi {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15.6px;
+    }
+    .btn_add_to_basket {
+        bottom: 8px;
+        right: 46px;
+    }
+    .tinvwl_add_to_wishlist_button {
+        bottom: 8px;
+        right: 8px;
+    }
+    .price-wrapp span.woocommerce-Price-amount.del>bdi {
+        padding-left: 8px;
+    }
+}
+
+@media(max-width:768px){
+    section {
+      padding: 0 29px;
+    }
+  }
+
+  @media(max-width:720px){
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .category-filter {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+ 
+@media(max-width:640px) {
+    section {
+      padding: 0 20px;
+    }
+}
+
+@media(max-width:480px){
+    .category-filter {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .tinvwl_add_to_wishlist_button {
+        bottom: auto;
+        top:6px;
+        right: 5px;
+    }
+    .btn_add_to_basket {
+        bottom: 12px;
+        right: 12px;
+    }
+    .price-wrapp span.woocommerce-Price-amount.del>bdi {
+        padding-left: 0;
+    }
+    .price-wrapp {
+        display:flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    .product_item {
+        height: 250px;
+    }
+    .product_image_item {
+        height: 164px;
+    }
+    .product-attribute-type {
+        display: none;
+    }
+}
+
+@media(max-width:340px){
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .product_image_item img {
+        object-fit: cover;
+    }
 }
