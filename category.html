@@ -9,18 +9,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prata&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="category.css">
+    <script src="/index.js" defer></script>
     <title>category</title>
 </head>
 
 <body>
     <section>
-        <div class="category-title">
+        <div class="category-title-wrapp">
+            <div class="category-title">
             <h1>Товары для здоровья</h1>
             <p>У нас вы можете найти широкий ассортимент товаров для вашего здоровья. Мы предлагаем средства
                 от папиллом, лечение суставов, вальгусную деформацию и многое другое. У нас вы также найдёте эффективные
                 средства от грибка ногтей, варикоза и псориаза. Не забудьте пополнить запас омега-3 кислот и других
                 полезных добавок для вашего организма.</p>
+            </div>
         </div>
     </section>
 
@@ -32,13 +35,13 @@
                         Бренд <span>(1)</span>
                     </div>
                     <div class="filter-list">
-                        <label for="dumor">
+                        <label for="dumor" class="custom-checkbox-label">
                             D'umor
-                            <input name="dumor" type="checkbox">
+                            <input name="dumor" type="checkbox"  class="custom-checkbox">
                         </label>
-                        <label for="dumor">
+                        <label for="dumor" class="custom-checkbox-label">
                             D'umor natural pharm
-                            <input name="dumor_natural" type="checkbox">
+                            <input name="dumor_natural" type="checkbox"  class="custom-checkbox">
                         </label>
                     </div>
                 </div>
@@ -49,11 +52,11 @@
                     <div class="filter-list">
                         <label for="type_product">
                             Крем для ухода за кожей
-                            <input name="type_product" type="checkbox">
+                            <input name="type_product" type="checkbox" class="custom-checkbox">
                         </label>
                         <label for="type_product">
                             Жиросжигатель
-                            <input name="type_product" type="checkbox">
+                            <input name="type_product" type="checkbox" class="custom-checkbox">
                         </label>
                     </div>
                 </div>
@@ -67,64 +70,174 @@
                 </div>
                 <div class="filter-item">
                     <div class="filter-name">
-                        Бренд <span>(1)</span>
+                        Пол <span>(1)</span>
                     </div>
                     <div class="filter-list">
-
+                        <label for="dumor" class="custom-checkbox-label">
+                           Мужской
+                            <input name="m" type="checkbox"  class="custom-checkbox">
+                        </label>
+                        <label for="dumor" class="custom-checkbox-label">
+                           Женский
+                            <input name="g" type="checkbox"  class="custom-checkbox">
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-name reset-filter">
+                       Очистить фильтр
                     </div>
                 </div>
             </div>
-            <div class="category-product-list">
 
-                <div class="woocommerce category-wrapp columns">
 
-                    <ul class="products sub-category">
-                        <li
-                            class="product_item ">
-                            <a href=""
-                                class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                <div class="product_image_item"><img width="78" height="258"
-                                        src="http://balace/wp-content/uploads/2024/06/Mask-group-1.png"
+                <div class="woocommerce products-wrapp columns">
+                    <ul class="products">
+                        <li class="product_item ">
+                            <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                <div class="product_image_item"><img width="78" height="258" src="/img/product-img.png"
                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
                                         alt="" decoding="async" loading="lazy"></div>
-                                  <div class="product-attribute-wrapp">
-                                    <h2 class="woocommerce-loop-product__title h4 text_main">ALCOZEPAM test value1</h2>
+                                <div class="product-attribute-wrapp">
+                                    <div class="product-attribute-type">Крем интимный</div>
+                                    <h2 class="woocommerce-loop-product__title">Power Life</h2>
                                     <div class="product_attribute_container">
-                                        <div class="h6 text_dark">
+                                        <div class="price-wrapp">
                                             <span class="woocommerce-Price-amount amount"><bdi>439&nbsp;
-                                                <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
                                             </span>
                                             <span class="woocommerce-Price-amount amount del"><bdi>990&nbsp;
-                                                <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
                                             </span>
-                                            
+
                                         </div>
-                                      
+
                                     </div>
                                 </div>
                             </a>
-                            <a href="?add-to-cart=402" data-quantity="1"
-                                class="btn_add_to_basket btn_add_to_basket button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                data-product_id="402" data-product_sku="энзимная-пудра-balace-1-3"
-                                aria-label="Add to cart: “ALCOZEPAM test value1”" rel="nofollow"></a>
-                            <div class="tinv-wraper woocommerce tinvwishlist tinvwl-after-add-to-cart tinvwl-loop-button-wrapper tinvwl-woocommerce_after_shop_loop_item"
-                                data-tinvwl_product_id="402">
-                                <div class="tinv-wraper woocommerce tinv-wishlist tinvwl-shortcode-add-to-cart tinvwl-wp_ajax_nopriv_filter_products_by_price"
-                                    data-tinvwl_product_id="402">
-                                    <a role="button" tabindex="0" name="" aria-label=""
-                                        class="tinvwl_add_to_wishlist_button tinvwl-icon-heart no-txt tinvwl-position-after"
-                                        data-tinv-wl-list="[]" data-tinv-wl-product="402"
-                                        data-tinv-wl-productvariation="0" data-tinv-wl-productvariations="[]"
-                                        data-tinv-wl-producttype="simple" data-tinv-wl-action="addto"></a>
-                                    <div class="tinvwl-tooltip"></div>
-                                </div>
+                            <a href="" data-quantity="1" class="btn_add_to_basket button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="281" data-product_sku="" aria-label="Add to cart: “Ginseng balace Pil”" rel="nofollow"></a>
+                            <div class="tinv-wraper woocommerce tinv-wishlist tinvwl-after-add-to-cart tinvwl-loop-button-wrapper tinvwl-woocommerce_after_shop_loop_item" data-tinvwl_product_id="">
+                                <a role="button" tabindex="0" name="" aria-label="" class="tinvwl_add_to_wishlist_button tinvwl-icon-heart no-txt tinvwl-position-after tinvwl-loop" data-tinv-wl-list="[]" data-tinv-wl-product="" data-tinv-wl-productvariation="0" data-tinv-wl-productvariations="[]" data-tinv-wl-producttype="simple" data-tinv-wl-action="addto"></a>		<div class="tinvwl-tooltip"></div>
                             </div>
+                        </li>
+                        <li class="product_item ">
+                            <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                <div class="product_image_item"><img width="78" height="258" src="/img/product-img1.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt="" decoding="async" loading="lazy"></div>
+                                <div class="product-attribute-wrapp">
+                                    <div class="product-attribute-type">Возбуждающее средство</div>
+                                    <h2 class="woocommerce-loop-product__title">Black Diablo </h2>
+                                    <div class="product_attribute_container">
+                                        <div class="price-wrapp">
+                                            <span class="woocommerce-Price-amount amount"><bdi>419&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+                                            <span class="woocommerce-Price-amount amount del"><bdi>990&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="product_item ">
+                            <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                <div class="product_image_item"><img width="78" height="258" src="/img/product-img2.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt="" decoding="async" loading="lazy"></div>
+                                <div class="product-attribute-wrapp">
+                                    <div class="product-attribute-type">Крем для ухода за кожей</div>
+                                    <h2 class="woocommerce-loop-product__title">Крем невесты </h2>
+                                    <div class="product_attribute_container">
+                                        <div class="price-wrapp">
+                                            <span class="woocommerce-Price-amount amount"><bdi>439&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+                                            <span class="woocommerce-Price-amount amount del"><bdi>990&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="product_item ">
+                            <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                <div class="product_image_item"><img width="78" height="258" src="/img/product-img.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt="" decoding="async" loading="lazy"></div>
+                                <div class="product-attribute-wrapp">
+                                    <div class="product-attribute-type">Крем интимный</div>
+                                    <h2 class="woocommerce-loop-product__title">Power Life</h2>
+                                    <div class="product_attribute_container">
+                                        <div class="price-wrapp">
+                                            <span class="woocommerce-Price-amount amount"><bdi>439&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+                                            <span class="woocommerce-Price-amount amount del"><bdi>990&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="product_item ">
+                            <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                <div class="product_image_item"><img width="78" height="258" src="/img/product-img1.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt="" decoding="async" loading="lazy"></div>
+                                <div class="product-attribute-wrapp">
+                                    <div class="product-attribute-type">Возбуждающее средство</div>
+                                    <h2 class="woocommerce-loop-product__title">Black Diablo </h2>
+                                    <div class="product_attribute_container">
+                                        <div class="price-wrapp">
+                                            <span class="woocommerce-Price-amount amount"><bdi>419&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+                                            <span class="woocommerce-Price-amount amount del"><bdi>990&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="product_item ">
+                            <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                <div class="product_image_item"><img width="78" height="258" src="/img/product-img2.png"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
+                                        alt="" decoding="async" loading="lazy"></div>
+                                <div class="product-attribute-wrapp">
+                                    <div class="product-attribute-type">Крем для ухода за кожей</div>
+                                    <h2 class="woocommerce-loop-product__title">Крем невесты </h2>
+                                    <div class="product_attribute_container">
+                                        <div class="price-wrapp">
+                                            <span class="woocommerce-Price-amount amount"><bdi>439&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+                                            <span class="woocommerce-Price-amount amount del"><bdi>990&nbsp;
+                                                    <span class="woocommerce-Price-currencySymbol">руб</span></bdi>
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
 
-
-            </div>
     </section>
 
 
