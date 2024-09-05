@@ -136,6 +136,15 @@ section {
   font-size: 72px;
   color: #E8E9D9;
 }
+.title-wrapp.title-wrapp.natural {
+  flex-direction: row;
+}
+.title-wrapp.natural h1 {
+  color: #000000;
+}
+.title-wrapp.natural p {
+  color: #E8E9D9;
+}
 
 .catalog-wrapp {
   position: relative;
@@ -158,7 +167,9 @@ section {
   display: flex;
   object-fit: contain;
 }
-
+.container-img.dumor-natural img{
+  width: max-content;
+}
 
 .catalog-item {
   position: relative;
@@ -237,6 +248,9 @@ section {
     font-size: 50px;
     line-height: 50.02px;
   }
+  .container-img.dumor-natural img {
+    width: 205px;
+  }
 }
 
 
@@ -285,6 +299,9 @@ section {
 
   .container-img {
     height: 70px;
+  }
+  .container-img.dumor-natural img {
+    display: none;
   }
 
 }
